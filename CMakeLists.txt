@@ -26,14 +26,5 @@ add_compile_options(-std=c++11)
 link_directories(/home/unitree/laikago_sdk/lib)
 set(EXTRA_LIBS liblaikago_comm.so lcm)
 
-add_executable(position_lcm src/position_mode.cpp)
-target_link_libraries(position_lcm ${EXTRA_LIBS} ${catkin_LIBRARIES})
-
-add_executable(velocity_lcm src/velocity_mode.cpp)
-target_link_libraries(velocity_lcm ${EXTRA_LIBS} ${catkin_LIBRARIES})
-
-add_executable(torque_lcm src/torque_mode.cpp)
-target_link_libraries(torque_lcm ${EXTRA_LIBS} ${catkin_LIBRARIES})
-
 add_executable(walk_lcm src/walk_mode.cpp)
 target_link_libraries(walk_lcm ${EXTRA_LIBS} ${catkin_LIBRARIES})
